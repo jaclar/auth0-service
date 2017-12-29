@@ -1,0 +1,31 @@
+{
+  "name": "auth0-service",
+  "version": "1.0.0",
+  "description": "A sample service for Auth0 exercise",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "npm run lint",
+    "test": "tape test/*.js",
+    "lint": "semistandard ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jaclar/auth0-service.git"
+  },
+  "keywords": [
+    "exercise"
+  ],
+  "author": "Lars Jacob <jacob.lars@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaclar/auth0-service/issues"
+  },
+  "homepage": "https://github.com/jaclar/auth0-service#readme",
+  "devDependencies": {
+    "semistandard": "^11.0.0",
+    "tape": "^4.8.0"
+  },
+  "dependencies": {
+    "restify": "^6.3.4"
+  }
+}
