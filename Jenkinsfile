@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "/usr/bin/packer build -var 'aws_access_key=$AWS_ACCESS_KEY' -var 'aws_secret_key=$AWS_SECRET_KEY -var 'build_number=${env.BUILD_NUMBER} packer/ami.json"
+                sh "/usr/bin/packer build -var 'build_number=${env.BUILD_NUMBER}' packer/ami.json"
             }
 
         }
