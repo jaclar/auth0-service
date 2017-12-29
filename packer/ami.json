@@ -20,7 +20,7 @@
     },
     "instance_type": "t2.micro",
     "ssh_username": "ubuntu",
-    "ami_name": "[lars] auth0 service {{usre `build_number`}}"
+    "ami_name": "[lars] auth0 service {{user `build_number`}}"
 
   }],
   "provisioners": [{
