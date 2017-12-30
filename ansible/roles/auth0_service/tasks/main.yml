@@ -17,10 +17,10 @@
   shell: "sudo tar -xzvf /var/tmp/latest.tar.gz -C /srv/node"
 - name: Execute chown
   shell: "sudo chown -R www-data:www-data /srv/node"
-- name: Upload service unit
+- name: Upload systemd unit
   copy: src=auth0.service dest=/etc/systemd/system/auth0.service mode=0644
 - name: ensure auth0_service is started
-  systemd:
+  service:
     name: auth0
-    enabled: yes
     state: started
+    enabled: yes
