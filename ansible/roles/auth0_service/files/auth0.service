@@ -2,7 +2,7 @@
 Description=Job that runs the auth0 daemon
 
 [Service]
-Type=forking
+Type=simple
 Environment=NODE_ENV=production
 Group=www-data
 User=www-data
