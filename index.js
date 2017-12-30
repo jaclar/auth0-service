@@ -1,11 +1,17 @@
 var restify = require('restify');
 
 function respond (req, res, next) {
-  res.send('hello ' + req.params.name);
+  res.send({message: 'hello ' + req.params.name});
+  next();
+}
+
+function healthCheck (req, res, next) {
+  res.send({status: 'ok'});
   next();
 }
 
 var server = restify.createServer();
+server.get('/_health', healthCheck);
 server.get('/hello/:name', respond);
 server.head('/hello/:name', respond);
 
