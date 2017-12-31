@@ -1,4 +1,0 @@
-- name: start auth0_service
-  service: name=auth0_service state=started
-- name: restart auth0_service
-  service: name=auth0_service state=restarted

@@ -1,5 +1,5 @@
 #!/groovy
-
+@Library('a-deploy') _
 
 pipeline {
     environment {
@@ -29,7 +29,11 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                sh "/usr/bin/packer build -var 'build_number=${env.BUILD_NUMBER}' packer/ami.json"
+                awsDeploy {
+                    name = 'lars-service'
+                    region = 'us-east-2'
+                    group = '[lars] auth0 service'
+                }
             }
         }
     }
