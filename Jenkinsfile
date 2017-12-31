@@ -31,7 +31,6 @@ pipeline {
             steps {
                 sh "/usr/bin/packer build -var 'build_number=${env.BUILD_NUMBER}' packer/ami.json"
             }
-
         }
     }
 }
