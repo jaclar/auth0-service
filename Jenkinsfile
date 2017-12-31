@@ -23,12 +23,10 @@ pipeline {
             }
         }
         stage('Deploy') {
-            steps {
-                awsDeploy {
-                    name = 'lars-service'
-                    region = 'us-east-2'
-                    group = '[lars] auth0 service'
-                }
+            awsDeploy {
+                name = 'lars-service'
+                region = 'us-east-2'
+                group = '[lars] auth0 service'
             }
         }
     }
