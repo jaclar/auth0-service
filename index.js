@@ -10,8 +10,15 @@ function healthCheck (req, res, next) {
   next();
 }
 
+function welcome (req, res, next) {
+  res.send({message: 'Welcome 2018!'});
+  next();
+}
+
 var server = restify.createServer();
 server.get('/_health', healthCheck);
+
+server.get('/', welcome);
 server.get('/hello/:name', respond);
 server.head('/hello/:name', respond);
 
