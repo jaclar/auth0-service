@@ -23,7 +23,9 @@ pipeline {
             }
         }
         stage('Deploy') {
-            awsDeploy 'lars-service', 'us-east-2', '[lars] auth0 service'
+            steps {
+                awsDeploy 'lars-service', 'us-east-2', '[lars] auth0 service'
+            }
         }
     }
 }
