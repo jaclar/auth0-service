@@ -1,6 +1,6 @@
 {
   "name": "auth0-service",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A sample service for Auth0 exercise",
   "main": "index.js",
   "scripts": {
